@@ -2,6 +2,8 @@
     font-family: 'Segoe UI Symbol', sans-serif !important;
 }
 
+@import "tailwindcss";
+
 /* :root {
     font-family: 'Segoe UI Symbol', sans-serif !important;
 } */

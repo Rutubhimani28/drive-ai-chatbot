@@ -23,7 +23,7 @@ import SideBarRoute from '../router';
 // import { RiFileExcel2Line } from "react-icons/ri";
 import NotificationsIcon from '@mui/icons-material/Notifications';
 
-const drawerWidth = 250;
+const drawerWidth = 260;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
     ({ theme }) => ({
@@ -154,11 +154,11 @@ const Layout = () => {
             <List>
                 {routes?.map((item, index) => (
                     <ListItem key={index} disablePadding>
-                        <ListItemButton onClick={() => handleRedirect(item?.path)} style={{ background: activeRoute?.key == item?.key ? "#ffffff" : "", color: "Black", borderRadius: "8px", boxSizing: "border-box" }}>
+                        <ListItemButton onClick={() => handleRedirect(item?.path)} style={{ background: activeRoute?.key == item?.key ? "#1A73E81A" : "", color: activeRoute?.key == item?.key ? "#1A73E8" : "Black", borderRadius: "8px", boxSizing: "border-box" }}>
                             {/* <ListItemIcon sx={{ color: 'white' }}>
                                 {item?.icon}
                             </ListItemIcon> */}
-                            <ListItemText primary={item?.title}  />
+                            <ListItemText primary={item?.title} className='!font-bold !text-base'/>
                         </ListItemButton>
                     </ListItem>
                 ))}
@@ -187,7 +187,7 @@ const Layout = () => {
                         >
                             <MenuIcon sx={{ color: "black" }} />
                         </IconButton>
-                        <Typography variant="h6" noWrap component="div" color='black'>
+                        <Typography variant="h6" noWrap component="div" color='black' className='!text-2xl'>
                             {activeRoute?.title}
                         </Typography>
                     </Box>
@@ -243,7 +243,7 @@ const Layout = () => {
                 open={open}
             >
                 <DrawerHeader sx={{ display: 'flex', justifyContent: 'center'}}>
-                    <Typography sx={{ color: "black" }}>Drive Ai chatbot</Typography>
+                    <Typography className='!text-2xl'>Drive Ai chatbot</Typography>
                 </DrawerHeader>
                 <Divider />
                 <List>
